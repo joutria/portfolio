@@ -1,0 +1,281 @@
+/*Reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 2080px;
+}
+
+/*Helpers*/
+.wrap{
+    flex-wrap: wrap;
+}
+
+.flex{
+    display: flex;
+}
+
+.space-between{
+    justify-content: space-between;
+}
+
+.space-even{
+    justify-content: space-evenly;
+}
+
+.centerY{
+    align-items: center;
+}
+.centerX{
+    justify-content: center;
+}
+
+.blue-gradient{
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(42,9,129,1) 35%, rgba(0,0,0,1) 100%);    
+}
+
+.red{
+    border: 0.5em red solid;
+}
+
+.wrap{
+    flex-wrap: wrap;
+}
+
+.bl-col{
+    color: black;
+}
+
+/*styles*/
+@media (max-width: 500px) {
+    .nav-option{
+        display: none;
+    }
+}
+
+nav{
+    height: 8em;
+    padding: 0 4em;
+    background: rgba(0,0,0,0.8);
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    z-index: 99;
+    margin: 0 0 3em 0;
+}
+
+.nav-option{
+    color: rgba(255,255,255,1);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 120%;
+    text-shadow: 0.1em 0.1em 0.1em rgb(0, 187, 162);
+    transition: 0.25s;
+    position: relative;
+}
+
+.nav-option:hover{
+    transform: scale(1.2);
+}
+
+.nav-option:hover::before{
+    content: "";
+    position: absolute;
+    pointer-events: none;
+
+    height: 0.1em;
+    width: 100%;
+    background-color: aqua;
+    top: 100%;
+}
+
+ul{
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+li{
+    padding: 0.5em;
+}
+
+h1,h2,h3{
+    color: white;
+    text-shadow: 0.2em 0.2em 0.1em rgba(255,255,255,0.1);
+    padding: 0.5em 1em;
+    display: block;
+}
+
+h1{
+    font-size: 2.5em;
+}
+
+h2{
+    font-size: 3em;
+}
+
+h3{
+    font-size: 2em;
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+}
+
+p{
+    color: antiquewhite;
+    padding: 0em 1em;
+    line-height: 1.5em;
+    font-size: 1.5em;
+}
+
+.main{
+    min-height: 60em;
+}
+
+.picture{
+    border-radius: 1em;
+    position: relative;
+    max-height: 20em;
+    box-shadow: 1em 1em 1em rgba(0,0,0,0.5);
+}
+
+.card{
+    border: 0.25em solid rgb(0, 217, 255);
+    box-shadow: 0 0 1em;
+    border-radius: 0.5em;
+    background: none;
+    margin: 1em;
+    flex-wrap: wrap;
+    width: 20em;
+    height: 30em;
+    overflow: hidden;
+    position: relative;
+    transition: 0.5s;
+}
+
+.card:hover{
+    box-shadow: 0 0 1.5em rgba(42, 120, 131, 0.5);
+} 
+
+.card:hover .card-obj{
+    filter: blur(5px);
+}
+
+.card::before{
+    background: rgba(0, 0, 0, 0.8);
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    width: 0%;
+    height: 50%;
+    right: 100%;
+    transition: 0.5s;
+    overflow: hidden;
+    background-position: center;
+    z-index: 10;
+}
+
+.card::after{
+    background: rgba(0, 0, 0, 0.8);
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    width: 0%;
+    height: 50%;
+    top: 50%;
+    left: 100%;
+    transition: 0.5s;
+    overflow: hidden;
+    background-position: center;
+    z-index: 10;
+}
+
+.card:hover::after{
+    width: 100%;
+    left: 0%;
+}
+
+.card:hover::before{
+    width: 100%;
+    right: 0%;
+}
+
+.card:hover img{
+    opacity: 0.2;
+}
+
+img{
+    border-radius: 1em;
+    max-width:100%;
+    padding: 1em;
+    transition: 0.5s;
+}
+
+.hidden{
+    position: absolute;
+    font-size: 2em;
+    bottom: 7em;
+    display: none;
+    transition: 1s;
+}
+
+.card:hover .hidden{
+    display: block;
+    z-index: 999;
+    filter: 0px;
+}
+
+.hidden::before{
+    position: absolute;
+    content: "";
+    pointer-events: none;
+    top: 90%;
+    height: 0.2em;
+    width: 0%;
+    background: 0.5em rgba(0,255,255,0.9);
+}
+
+.card:hover .hidden::before{
+    width: 80%;
+}
+
+.polaroid1,
+.polaroid2,
+.polaroid3{
+    margin: 1em;
+    border: 0.5em solid rgba(0,0,0,1);
+    background: rgba(255,255,255,1);
+    transition: 0.5s;
+    height: 10em;
+    width: 10em;
+    display: flex;
+    justify-content: center;
+}
+
+.polaroid1{
+    transform: rotate(30deg);
+}
+
+.polaroid2{
+    transform: rotate(-25deg);
+}
+
+.polaroid3{
+    transform: rotate(15deg);
+}
+
+.polaroid1:hover,
+.polaroid2:hover,
+.polaroid3:hover{
+    transform: rotate(0deg) scale(1.5);
+    z-index: 9;
+}
+
+.inner-polaroid{
+    margin: 5%;
+    background: grey;
+    width: 90%;
+    height: 50%;
+}
