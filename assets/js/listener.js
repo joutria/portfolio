@@ -1,10 +1,13 @@
-window.onload = function(){
-    const menu = document.querySelector(".menu_mobile");
+function collapse(){
+    var coll = document.getElementsByClassName("collapsible");
 
-    menu.addEventListener = function(){}
-
-    menu.onclick= function(){
-        console.log(menu);
-        menu.styles.height="10em";
-    }
+    coll.addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+                content.style.display = "block";
+        }
+    });
 }

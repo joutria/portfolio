@@ -1,0 +1,63 @@
+/*Helpers*/
+.wrap{
+    flex-wrap: wrap;
+}
+
+.flex{
+    display: flex;
+}
+
+.space-between{
+    justify-content: space-between;
+}
+
+.space-even{
+    justify-content: space-evenly;
+}
+
+.centerY{
+    align-items: center;
+}
+.centerX{
+    justify-content: center;
+}
+
+.red{
+    border: 0.5em red solid;
+}
+
+.red-shadow{
+    text-shadow: 0.1em 0.1em 0.1em #810000;
+}
+
+.row{
+    flex-direction: row;
+}
+
+.column{
+    flex-direction: column;
+}
+
+.bl-col{
+    color: black;
+}
+
+.decor{
+    text-decoration: underline;
+}
+
+.scale:hover{
+    transform: scale(1.1);
+}
+
+.overflow{
+    overflow: hidden;
+}
+
+.white{
+    color: white;
+}
+
+.golden{
+    color: gold;
+}

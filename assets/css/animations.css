@@ -1,0 +1,52 @@
+@keyframes changetext {
+    0%{
+        width: 0%;
+        color: rgba(172, 79, 79, 0);
+    }
+
+    33.333%{
+        width: 100%;
+        color: rgba(172, 79, 79, 1);
+    }
+
+    66.666%{
+        width: 100%;
+        color: rgba(170, 131, 22, 1);
+    }
+
+    100%{
+        width: 100%;
+        color: rgba(170, 131, 22, 1);
+    }
+    
+}
+
+@keyframes blink {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: auto;
+    }
+}
+
+div.step2{
+    white-space: nowrap;
+    animation: blink 0.3s ease-in-out 2s infinite alternate both;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+div.step1{
+    white-space: nowrap;
+    animation: changetext 5s ease-in-out 0s infinite alternate both;
+    overflow: hidden;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+.card:hover p.hidden{
+    animation-name: changetext;
+    animation-duration: 1s;
+    overflow: hidden;
+}
