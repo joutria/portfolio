@@ -45,11 +45,19 @@ section{
     margin: 0em;
 }
 
+@media (min-width:1000){
+    #menu{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
 
 /* Media queries */
 @media (max-width: 1000px) {
-    .nav-option{
+    #menu{
         display: none;
+        flex-direction: column;
     }
 
     .col-s-12{
@@ -57,7 +65,7 @@ section{
     }
 
     .menu_mobile{
-        display: flex;
+        display: block;
     }
 
     .pseudo-wrap{
@@ -90,6 +98,19 @@ section{
     }
 
     .profile-pic{
+        height: 7.5em;
+    }
+}
+
+@media (max-width: 600px){
+    .profile-pic{
         display: none;
+    }
+
+    .badge-head,
+    .badge-body{
+        position:relative;
+        align-items: center;
+        justify-content: center;
     }
 }

@@ -8,6 +8,14 @@
     --dark-purple: #21094e;
 }
 
+.collapsible{
+    display: flex !important;
+    position: absolute;
+    top: 100%;
+    right: 3em;
+    background: rgba(0,0,0,0.9);
+}
+
 /*styles*/
 body{
     background: black;
@@ -24,7 +32,9 @@ nav{
 }
 
 .menu_mobile{
-    position: relative;
+    position: fixed;
+    top: -0.8em;
+    right: 0.5em;
     width: auto;
     padding: 0em 0.5em 0.2em 0.5em;
     margin: 1em;
@@ -41,8 +51,7 @@ nav{
 
 }
 
-.menu_mobile:hover,
-.menu_mobile:focus{
+.menu_mobile:hover{
     background: #eeebdd;
     color: #ce1212;
 }
@@ -132,6 +141,7 @@ nav{
 }
 
 ul{
+    display: inline;
     list-style: none;
     flex-wrap: wrap;
 }

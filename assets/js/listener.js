@@ -1,13 +1,14 @@
-function collapse(){
-    var coll = document.getElementsByClassName("collapsible");
+let button = document.querySelector("#button");
+let menu= document.querySelector("#menu");
 
-    coll.addEventListener("click", function() {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.display === "block") {
-            content.style.display = "none";
-        } else {
-                content.style.display = "block";
-        }
-    });
-}
+console.log(button);
+console.log(menu.classList.contains("collapsible"));
+
+button.addEventListener("click", function(){
+    if(menu.classList.contains("collapsible")){
+        menu.classList.remove("collapsible");
+    }else{
+        menu.classList.add("collapsible");
+    }
+    console.log(menu)
+});
