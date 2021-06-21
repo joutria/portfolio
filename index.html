@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" href="./assets/css/grid.css">
@@ -30,28 +32,33 @@
             </ul>
         </div>
     </nav>
-    <div class="flex centerY centerX overflow col-12">
-        <img class="skewed" src="./assets/images/main.jpeg" alt="web-page">
+    <div id="main-img" class="flex centerY centerX overflow col-12">
+        <img class="back" src="./assets/images/main.jpeg" alt="web-page">
     </div>
-    <div id="main" class="main flex centerY centerX space-even pseudo-wrap">
-        <div class="flex column centerX col-6 col-s-12">
-            <div class="flex centerY title">
-                <h2 class="red-shadow">I'm a</h2>
-                <div class="flex">
-                    <div class="step1"><h2 class="red-shadow">Web Developer</h2></div>
-                    <div class="step2"><h2>|</h2></div>
+    <div id="main" class="flex centerY centerX space-even column pseudo-wrap">
+        <div class="flex row centerY centerX col-12">
+            <div class="flex column centerX col-6 col-s-12">
+                <div class="flex centerY title">
+                    <h2 class="red-shadow">I'm a</h2>
+                    <div class="flex">
+                        <div class="step1"><h2 class="red-shadow">Web Developer</h2></div>
+                        <div class="step2"><h2>|</h2></div>
+                    </div>
                 </div>
+                <p class="main-text">
+                    Hi, my name is Jose and I'm a Web-Developer ready and prepared to help you creating the ideal website that you have in mind. If you are looking for a customized website, contact me.
+                </p>
             </div>
-            <p class="main-text">
-                Hi, my name is Jose and I'm a Web-Developer ready and prepared to help you creating the ideal website that you have in mind. If you are looking for a customized website, contact me.
-            </p>
+            <div class="col-4 col-s-12 flex centerY centerX">
+                <img class="me" src="./assets/images/yo.jpg">
+            </div>
         </div>
-        <div class="col-4 col-s-12 flex centerY centerX">
-            <img class="me" src="./assets/images/yo.jpg">
+        <div class="flex centerY centerX col-12 continue">
+            <a href="#services"><button class="continue">></button></a>
         </div>
     </div>
-    <section id="services" class="flex centerY centerX section">
-        <h2 class="decor red-shadow">Services</h2>
+    <section id="services" class="flex centerY">
+        <h2 class=" red-shadow">Services</h2>
         <div class="flex centerX space-even wrap">
             <div class="card">
                 <div class="card-obj">
@@ -94,14 +101,17 @@
                 <p class="hidden">Design</p>
             </div>
         </div>
+        <div class="flex centerY centerX col-12 continue">
+            <a href="#portfolio"><button class="continue">></button></a>
+        </div>
     </section>
-    <section id="portfolio" class="flex centerY centerX section">
-        <h2 class="decor red-shadow">Porfolio</h2>
+    <section id="portfolio" class="flex centerY">
+        <h2 class=" red-shadow">Porfolio</h2>
         <div class="flex row pseudo-wrap centerY centerX space-between col-12">
             <div class="flex column col-3 col-s-12 centerY centerX">
                 <h3 class="white red-shadow">Education and Experience</h3>
                 <div>
-                    <p class="p white decor">Bachelors Degree:</p>
+                    <p class="p white ">Bachelors Degree:</p>
                     <p class="p white ">Industrial Engineer</p>
                     <p class="p white ">Process Analyst - 2019</p>
                     <p class="p white ">Customer Services Rep - 2020</p>
@@ -172,16 +182,23 @@
                 </div>
             </div>
         </div>
+        <div class="flex centerY centerX col-12 continue">
+            <a href="#contact"><button class="continue">></button></a>
+        </div>
     </section>
-    <section id="contact" class="flex centerY centerX section col-12">
-        <h2 class="decor red-shadow">Contact me</h2>
-        <label>Subject:</label>
-        <input type="text"><br>
-        <label>E-mail:</label>
-        <input type="text"><br>
+    <section id="contact" class="flex centerY centerX col-12">
+        <h2 class=" red-shadow">Contact me</h2>
+        <div class="flex centerY centerX col-6">
+            <label>Name:</label>
+            <input id="name" type="text">
+        </div>
+        <div class="flex col-6 centerY centerX">
+            <label>E-mail:</label>
+            <input id="email" type="text">
+        </div><br>
         <label>Mesagge:</label>
         <input class="col-6 col-s-12 message" type="text"><br>
-        <button>Send Mesage</button>
+        <button class="send">Send Mesage</button>
     </section>
     <script src="assets/js/listener.js"></script>
 </body>
