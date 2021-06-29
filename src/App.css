@@ -1,0 +1,99 @@
+*{
+  padding: 0;
+  margin: 0;
+  transition: 0.5s;
+}
+
+html, body{
+  width: 100%;
+  overflow: hidden;
+}
+
+.matrix{
+  position: absolute;
+  top: 0;
+  writing-mode: vertical-lr;
+  text-orientation:upright;
+  color: rgba(0, 125, 0, 0.5);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App {
+  background: radial-gradient(#414141, #0f0f0f);
+  height: 100vh;
+  width: 100vw;
+}
+
+.nav>div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.nav>div:hover{
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.top, .bot{
+  padding: 1em;
+  width: 100%;
+}
+
+.right, .left{
+  width: 2em;
+  padding: 1em;
+  height: 100%;
+}
+
+.nav {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 99;
+}
+
+.top{
+  position: absolute;
+  top: 0%;
+}
+
+.bot{
+  position: absolute;
+  bottom: 0%;
+}
+
+.right{
+  position: absolute;
+  right: 0;
+}
+
+.right>span{
+  display: inline-block;
+  transform: rotate(-90deg);
+  white-space: nowrap;
+}
+
+.left{
+  position: absolute;
+  left: 0;
+}
+
+.left>span{
+  display: inline-block;
+  transform: rotate(90deg);
+  white-space: nowrap;
+}
