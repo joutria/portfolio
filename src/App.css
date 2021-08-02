@@ -1,24 +1,38 @@
-*{
+* {
   padding: 0;
   margin: 0;
-  transition: 0.5s;
 }
 
-html, body{
+html,
+body,
+#root {
   width: 100%;
+  height: 100%;
   overflow: hidden;
 }
 
-.matrix{
-  position: absolute;
-  top: 0;
+.matrixCol {
+  position: fixed;
+  display: flex;
+  font-size: 1.5rem;
   writing-mode: vertical-lr;
-  text-orientation:upright;
-  color: rgba(0, 125, 0, 0.5);
-  font-family: 'Courier New', Courier, monospace;
+  text-orientation: upright;
+  white-space: nowrap;
+  color: rgba(0, 255, 0, 0.5);
+  text-shadow: 0 0 0.25em rgba(0, 255, 0, 1);
+  font-family: "Caesar Dressing", cursive;
+  overflow: hidden;
 }
 
-.content{
+.Matrix {
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 2em;
+  overflow: hidden;
+}
+
+.content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,27 +47,36 @@ html, body{
 
 .App {
   background: radial-gradient(#414141, #0f0f0f);
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 
-.nav>div{
+.matrixContainer {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.nav > div {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  transition: 0.5s;
 }
 
-.nav>div:hover{
+.nav > div:hover {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-.top, .bot{
+.top,
+.bot {
   padding: 1em;
   width: 100%;
 }
 
-.right, .left{
+.right,
+.left {
   width: 2em;
   padding: 1em;
   height: 100%;
@@ -63,37 +86,66 @@ html, body{
   position: absolute;
   height: 100%;
   width: 100%;
-  z-index: 99;
+  z-index: 0;
 }
 
-.top{
+.top {
   position: absolute;
   top: 0%;
 }
 
-.bot{
+.bot {
   position: absolute;
   bottom: 0%;
 }
 
-.right{
+.right {
   position: absolute;
   right: 0;
 }
 
-.right>span{
+.right > span {
   display: inline-block;
   transform: rotate(-90deg);
   white-space: nowrap;
 }
 
-.left{
+.left {
   position: absolute;
   left: 0;
 }
 
-.left>span{
+.left > span {
   display: inline-block;
   transform: rotate(90deg);
   white-space: nowrap;
+}
+
+.Contact {
+  position: absolute;
+  background-color: #0f0f0f;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+.close {
+  position: absolute;
+  top: -0.5em;
+  right: -0.5em;
+  font-size: 1.5rem;
+  font-weight: bold;
+  height: 1.5em;
+  width: 1.5em;
+  border-radius: 1em;
+  border: 0.2em solid rgba(0, 255, 0, 1);
+  outline: none;
+  color: white;
+  background: black;
+  box-shadow: 0 0 1em rgba(0, 255, 0, 0.5);
+}
+
+.close:hover{
+  color: black;
+  background: rgba(0, 255, 0, 1);
+  box-shadow: 0 0 1em rgba(0, 255, 0, 1);
 }

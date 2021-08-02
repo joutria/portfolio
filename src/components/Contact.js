@@ -1,7 +1,12 @@
 
-function Contact() {
+function Contact(props) {
   return (
-      <h2>Contact me</h2>
+      <div className="Contact">
+        <h2>Contact me</h2>
+        <button className="close" onClick={() => {
+              props.setContact(!props.contact);
+            }}>X</button>
+      </div>
   );
 }
 
